@@ -7,7 +7,7 @@ id = "1xOEOvSdBXPXXEcWV7VtiS7RoyEuDYzLC"
 output = "cars_moldova.csv"
 gdown.download(quiet=False, id=id, output=output)
 
-df = pd.read_csv('~/MLOps/task1/cars_moldova.csv')
+df = pd.read_csv('~/mlops_task1/cars_moldova.csv')
 
 num_columns = []
 for column_name in df.columns:
