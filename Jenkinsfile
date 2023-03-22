@@ -8,9 +8,6 @@ pipeline {
     }
     stage('data_creation') {
       steps {
-        sh 'cd var/lib/jenkins/workspace/poopipepe'
-        sh 'mkdir mlops_task1'
-        sh 'cd mlops_task1'
         sh 'python3 data_creation.py'
       }
     }
