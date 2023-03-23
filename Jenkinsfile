@@ -8,7 +8,7 @@ pipeline {
     }
     stage('data_creation') {
       steps {
-        sh 'python3 data_creation_copy.py'
+        sh 'python3 data_creation.py'
       }
     }
     stage('model_preprocessing') {
