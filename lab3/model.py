@@ -59,11 +59,10 @@ with open('model.pkl', 'rb') as file:
     pickle_model = pickle.load(file)
 
 y_predict = pickle_model.predict(x_test)
-print('r2 для тестовых данных -',  r2_score(y_test,y_predict))
+# print('r2 для тестовых данных -',  r2_score(y_test,y_predict))
 st.title('Результаты работы модели')
 result = st.button('Рассчитать Score')
-if result: 
+if result:
     DF_cv_linreg = pd.DataFrame(scores)
     st.write('Результаты Кросс-валидации', '\n', DF_cv_linreg, '\n')
     st.write('Среднее r2 -', round(DF_cv_linreg.mean()[2], 2))
-
